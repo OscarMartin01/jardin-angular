@@ -1,0 +1,262 @@
+@font-face{
+    font-family: 'DynaPuff';
+    src: url('fonts/DynaPuff.ttf');
+}
+@font-face{
+    font-family: 'Chewy';
+    src: url('fonts/Chewy.ttf');
+}
+@font-face{
+    font-family: 'Fresca';
+    src: url('fonts/Fresca.ttf');
+}
+@font-face{
+    font-family: 'Pompiere';
+    src: url('fonts/Pompiere.ttf');
+}
+
+/*Generales*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+header{
+    height: 130px; 
+    z-index: 1;
+}
+
+.box-header{
+    display: flex;
+    justify-content: right;
+    font-family: 'DynaPuff', sans-serif;
+    align-items: center;
+    height: inherit;
+}
+
+.box-header img{
+    height: inherit;
+    align-self: center;
+    border-radius: 100% 0% 68% 32% / 32% 100% 0% 68% ;
+    padding: 0px 0px 0px 40px;
+}
+
+.box-header  h1{
+    font-size: 40px;
+    padding: 41px 40px;
+    color: #F2DC6D;
+}
+
+.box-header :is(img, h1){
+    background: #049Cd8;
+}
+
+body{
+    background: #F2DC6D;
+}
+
+/*Navegación*/
+
+nav{
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
+#nav{
+    display: flex;
+    height: 65px;
+    background-color: #0487D8;
+    margin: 0px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.lucide ,#check, .close{
+    display: none;
+}
+
+#nav li{
+    display: inline-block;
+    text-align: center;
+}
+
+#nav li a{
+    text-decoration: none;
+    padding: 16px 50px;
+    font-size: 25px;
+    height: inherit;
+    font-family: 'Chewy', sans-serif;
+    color: white;
+}
+
+#nav li a:hover, .actived{
+    background-color: rgba(0, 90, 240, 0.7);
+    color: white
+}
+
+/*Contenedor*/
+
+#content{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px black;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: auto;
+}
+
+/*Footer*/
+
+footer{
+    font-family: 'Pompiere', arial;
+    height: 90px;
+    display: flex;
+    background-color: #049CD8;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p{
+    display: flex;
+    height: inherit;
+    font-size: 30px;
+    padding-left: 11%;
+    align-items: center;
+    color: azure;
+}
+
+#social{
+    display: grid;
+    width: 160px;
+    grid-template-columns: auto auto auto;
+    padding-right: 11%;
+    column-gap: 25px;
+}
+
+@media screen and (max-width:1024px) {
+
+    /*Header*/
+    header{
+        height: 95px; 
+    }
+
+    .box-header  h1{
+        font-size: 25px;
+    }
+
+    /*Navegación*/
+
+    #nav{
+        height: 55px;
+    }
+
+    #nav li a{
+        padding: 14px 25px;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    header{
+        height: 92px; 
+    }
+
+    .box-header  h1{
+        font-size: 18px;
+    }
+
+    .box-header  h1{
+        font-size: 20px;
+        padding: 36px 10px;
+        color: #F2DC6D;
+    }
+
+    /*Barra navegación*/
+    nav{
+        position: sticky;
+        top: -1px;
+        z-index: 1;
+    }
+
+    #nav{
+        position: relative;
+    }
+    
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -200%;
+        background-color: #000000CF;
+        width: 100%;
+        height: 115vh;
+        transform: translateX(-100%);
+        transition: all 300ms ease-out;
+        padding-top: 112px;
+    }
+
+    .navegacion li{
+        padding: 13.5px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    #nav li a:hover, .actived{
+        background-color: transparent;
+    }
+
+    #nav li a{
+        padding: 25px 50px;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    .lucide{
+        display: inline;
+        position: absolute;
+        left: 11%;
+        top: 50%;
+        transform: translate(0px, -50%);
+    }
+
+    .lucide-menu-square{
+        color: white;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    #check:checked ~ .navegacion{
+        visibility: visible;
+        transition: all 300ms ease-in;
+    }
+
+    .navegacion.movido {
+        transform: translateX(0%); /* Mueve el menú 100px horizontalmente al aplicar la clase "movido" */
+    }
+
+    /*Footer*/
+
+    footer{
+        height: 90px;
+        display: flex;
+        background-color: #049CD8;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer p{
+        font-size: 21px;
+    }
+
+    #social{
+        width: 120px;
+        column-gap: 10px;
+    }
+}
+    

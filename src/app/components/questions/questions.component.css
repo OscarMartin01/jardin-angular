@@ -1,0 +1,87 @@
+#text{
+    padding: 35px 15px;
+}
+
+h2, p{
+    text-align: center;
+    font-family: 'Chewy';
+}
+
+.sub{
+    text-align: center;
+}
+
+h2{
+    font-size: 35px;
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.question{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+#acordeon h3{
+    font-family: 'DynaPuff';
+    font-size: 20px;
+    margin-left: 4px;
+    padding: 20px 0 20px 10px;
+}
+
+.ui-accordion .ui-accordion-content {
+    margin-left: 4px;
+}
+
+@media screen and (max-width:1200px) {
+    #text{
+        padding: 35px 20px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+    
+    #acordeon h3{
+        font-size: 14px;
+        padding: 15px 0 15px 7px;
+        
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .ui-accordion .ui-accordion-content {
+        padding: 1em 1.2em;
+    }
+
+    .ui-accordion-header-icon{
+        margin-left: -4px !important;
+
+    }
+
+    #acordeon h3{
+        padding: 15px 7px 15px 14px;
+        
+    }
+
+    h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+}
+
+
